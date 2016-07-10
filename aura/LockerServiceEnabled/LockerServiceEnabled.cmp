@@ -1,0 +1,15 @@
+<aura:component>
+    <aura:attribute name="isEnabled" type="Boolean" default="false" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <div style="position:absolute;top:0px;right:0px;">
+        <aura:if isTrue="{!v.isEnabled}">
+            <div style="background-color:#4ce876;color:white;">
+                <p>Locker Service is enabled</p>
+            </div>
+        <aura:set attribute="else">
+            <div style="background-color:#e96a6a;color:white;">
+                <p>Locker Service is disabled</p>
+            </div>
+        </aura:set></aura:if>
+    </div>
+</aura:component>
